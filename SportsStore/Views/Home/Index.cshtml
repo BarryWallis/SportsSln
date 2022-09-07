@@ -3,17 +3,7 @@
 <h4>Welcome to SportsStore</h4>
 @foreach (Product product in Model?.Products ?? Enumerable.Empty<Product>())
 {
-    <div class="card card-outline-primary m-1 p-1">
-        <div class="bg-faded p1">
-            <h4>
-                @product.Name
-                <span class="badge rounded-pill bg-primary text-white" style="float:right">
-                    <small>@product.Price.ToString("c")</small>
-                </span>
-            </h4>
-        </div>
-        <div class="card-text p-1">@product.Description</div>
-    </div>
+    <partial name="ProductSummary" model="product"/>
 }
 <div page-model="@Model?.PagingInfo" page-action="Index" page-classes-enabled="true" page-class="btn" 
      page-class-normal="btn-outline-dark" page-class-selected="btn-primary" class="btn-group pull-right m-1">
