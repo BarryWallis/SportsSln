@@ -82,6 +82,7 @@ public class SeedData
                     {
                         Name = "Bling-Bling King",
                         Description = "Gold-plated, diamond-studded king",
+                        Category = "Chess",
                         Price = 1200.00M
                     }
                     );
